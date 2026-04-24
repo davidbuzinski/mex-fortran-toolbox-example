@@ -60,8 +60,8 @@ jobs:
         with:
           command: mex -setup Fortran
 
-  homebrew-lfortran:
-    name: "homebrew lfortran on ${{ matrix.os }}"
+  homebrew-simply-fortran:
+    name: "simply-fortran on ${{ matrix.os }}"
     strategy:
       fail-fast: false
       matrix:
@@ -70,8 +70,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
-      - name: Install LFortran
-        run: brew install lfortran
+      - name: Install Simply Fortran
+        run: brew install --cask simply-fortran
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v3
       - name: Setup MEX
