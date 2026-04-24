@@ -21,8 +21,8 @@ identifier = "e5169f97-e7db-4a56-8461-01206cc29a42";
 toolboxFolder = "toolbox";
 
 opts = matlab.addons.toolbox.ToolboxOptions(toolboxFolder,identifier);
-opts.ToolboxName = "Mex Example";
-opts.MinimumMatlabRelease = "R2025b";
+opts.ToolboxName = "Fortran Mex Example";
+opts.MinimumMatlabRelease = "R2024b";
 
 matlab.addons.toolbox.packageToolbox(opts);
 end
