@@ -6,12 +6,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            compiler: gcc
+          - os: windows-latest
+            compiler: intel
+          - os: macos-latest
+            compiler: intel-classic
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
       - uses: fortran-lang/setup-fortran@v1
+        with:
+          compiler: ${{ matrix.compiler }}
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v3
       - name: Run tests and generate artifacts
