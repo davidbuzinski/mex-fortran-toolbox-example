@@ -24,6 +24,8 @@ jobs:
           compiler: ${{ matrix.compiler }}
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v3
+        with:
+          release: r2025a
       - name: Setup MEX
         uses: matlab-actions/run-command@v3
         with:
