@@ -25,6 +25,6 @@ jobs:
       - name: Setup MEX
         uses: matlab-actions/run-command@v3
         with:
-          command: mex -setup
+          command: mex -setup Fortran
       - name: Run tests and generate artifacts
         uses: matlab-actions/run-build@v3
