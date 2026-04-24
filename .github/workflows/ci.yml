@@ -8,14 +8,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
       - uses: fortran-lang/setup-fortran@v1
-      # - run: |
-      #     sudo apt-get update -y
-      #     sudo apt-get install -y gfortran-8
-      #     sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-8 100
-      #     sudo update-alternatives --set gfortran /usr/bin/gfortran-8
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v3
       - name: Run tests and generate artifacts
-        uses: matlab-actions/run-command@v3
-        with:
-          command: mex('-v', fullfile(matlabroot, 'extern', 'examples', 'refbook', 'timestwo.F'));
+        uses: matlab-actions/run-build@v3

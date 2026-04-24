@@ -1,3 +1,3 @@
-# MEX Fortran Hello World
+# Fortran MEX Example
 
-This repo uses `matlab-actions` to create a MEX file from Fortran source that prints "Hello MATLAB!"
+This repo uses `matlab-actions` to build and test a Fortran MEX function in MATLAB.
