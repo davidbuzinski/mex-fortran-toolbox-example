@@ -22,5 +22,9 @@ jobs:
           compiler: ${{ matrix.compiler }}
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v3
+      - name: Setup MEX
+        uses: matlab-actions/run-command@v3
+        with:
+          command: mex -setup
       - name: Run tests and generate artifacts
         uses: matlab-actions/run-build@v3
