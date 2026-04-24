@@ -12,7 +12,7 @@ jobs:
           - os: windows-latest
             compiler: intel
           - os: macos-latest
-            compiler: intel-classic
+            compiler: intel
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository
